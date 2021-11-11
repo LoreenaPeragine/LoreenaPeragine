@@ -169,8 +169,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: peragineloreenak@sau.edu</p>
     </div><br>
     <p>Let's get in touch. Send me a message:</p>
+    
+    <form method="post" action="subscriberform.php">
+      <textarea name="message"></textarea>
+      <input type="submit">
+    </form>
+    
+    <?php
+if($_POST["message"]) {
+mail("your@email.address", "Here is the subject line",
+$_POST["insert your message here"]. "From: an@email.address");
+}
+?>
 
-    <form action="mailto:peragineloreenak@sau.edu" target="_blank">
+    <!--<form action="mailto:peragineloreenak@sau.edu" target="_blank">
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
@@ -180,7 +192,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
-    </form>
+    </form> -->
   <!-- End Contact Section -->
   </div>
   
